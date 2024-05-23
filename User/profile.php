@@ -25,7 +25,6 @@ if(isset($_SESSION['login'], $_SESSION['name'], $_SESSION['number'], $_SESSION['
     $number = $_SESSION['number'];
     $email = $_SESSION['email'];
 } else {
- 
 }
 ?>
     <div class="main">
@@ -40,9 +39,7 @@ if(isset($_SESSION['login'], $_SESSION['name'], $_SESSION['number'], $_SESSION['
                 </ul>                         
                 </div>
             </div>
-        </div>
-        
-
+        </div>        
     <div class="container2">
     <div class="containerleft">
     <div class="containerleftheader">            
@@ -92,15 +89,12 @@ if(isset($_SESSION['login'], $_SESSION['name'], $_SESSION['number'], $_SESSION['
                     <div class="imageglav">
                         <div class="image">
                             <img class="img-people" src="img/Group 10.png">
-                            
                         </div>
                     </div>
-                
                 </div>
             </div>
         </div>
     </div>
-    
     <div class="main-fotter">
         <div class="fotter">
             <div class="fotter-container">
@@ -114,10 +108,8 @@ if(isset($_SESSION['login'], $_SESSION['name'], $_SESSION['number'], $_SESSION['
                 </div>
             </div>
         </div>
-    </div>
-
-    
+    </div>    
 </div>
 </body>
-
+    
 </html>
