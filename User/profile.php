@@ -16,12 +16,10 @@
 
 <?php
 error_reporting(0);
-session_start(); // начинаем сессию
-ob_start(); // начинаем буферизацию вывода
+session_start(); 
+ob_start(); 
 
-// Проверяем, установлены ли данные пользователя в сессии
 if(isset($_SESSION['login'], $_SESSION['name'], $_SESSION['number'], $_SESSION['email'])) {
-    // Если данные пользователя есть в сессии, присваиваем их переменным
     $login = $_SESSION['login'];
     $name = $_SESSION['name'];
     $number = $_SESSION['number'];
@@ -47,7 +45,6 @@ if(isset($_SESSION['login'], $_SESSION['name'], $_SESSION['number'], $_SESSION['
 
     <div class="container2">
     <div class="containerleft">
-<!-- Ваш HTML код для отображения данных пользователя в личном кабинете -->
     <div class="containerleftheader">            
         Привет, <?php echo $name; ?>!
     </div>
