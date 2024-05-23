@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
-session_start(); // начинаем сессию
-ob_start(); // начинаем буферизацию вывода
+session_start();
+ob_start(); 
 require_once('db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'], $_POST['pass'])) {
@@ -12,24 +12,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'], $_POST['pass'
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Если запрос выполнен успешно, получаем данные пользователя из результата запроса
         $row = $result->fetch_assoc();
         $login = $row['login'];
         $name = $row['name'];
         $number = $row['number'];
         $email = $row['email'];
 
-        // Сохраняем данные пользователя в сессии
         $_SESSION['login'] = $login;
         $_SESSION['name'] = $name;
         $_SESSION['number'] = $number;
         $_SESSION['email'] = $email;
-
-        // Выполняем перенаправление на страницу профиля
+        
         header("Location:../User/profile.php");
         exit();
     } else {
-        echo "<script>alert('Учетная запись не найдена. Пожалуйста, попробуйте ввести данные заново.')</script>";
+        echo "<script>alert('РЈС‡РµС‚РЅР°СЏ Р·Р°РїРёСЃСЊ РЅРµ РЅР°Р№РґРµРЅР°. РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РІРІРµСЃС‚Рё РґР°РЅРЅС‹Рµ Р·Р°РЅРѕРІРѕ.')</script>";
         echo "<script>window.location = 'avtorization.php';</script>";
     }
 }
