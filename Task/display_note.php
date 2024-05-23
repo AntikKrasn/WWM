@@ -1,5 +1,4 @@
-﻿
-    <?php
+<?php
     error_reporting(0);
     require_once('db.php');
     session_start();
@@ -37,13 +36,11 @@ function createNote() {
     if (noteText === '') {
         alert('Вы не ввели текст!');
     } else {
-        // Отправляем данные на серверный скрипт save_notes.php
         var xhr = new XMLHttpRequest();
         var params = 'noteText=' + encodeURIComponent(noteText);
 
-        // После успешной отправки данных, обновляем список заметок на странице
         var newListElement = document.createElement('li');
-                newListElement.setAttribute('data-note-id', xhr.responseText); // Предполагается, что сервер возвращает ID новой заметки
+                newListElement.setAttribute('data-note-id', xhr.responseText);
                 newListElement.innerHTML = '<span>' + noteText + '</span>' +
                                            '<div id="noteBtns-container">' +
                                            '<button id="editBtn" onclick="editNote(' + xhr.responseText + ')"><span class="fa-solid-fa-pen"></span></button>' +
@@ -51,7 +48,6 @@ function createNote() {
                                            '</div>';
                 document.getElementById('listContainer2').appendChild(newListElement);
 
-        // Формируем URL для отправки запроса на добавление задачи
         xhr.open('POST', 'save_notes.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -74,52 +70,37 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if ((e.target.tagName === "SPAN") && !e.target.classList.contains('note') && !e.target.classList.contains('fa-solid-fa-pen')) {
             var listItem = e.target.closest("li");
             listItem.remove();
-            // При необходимости обновите localStorage здесь
         }
     }, false);
 });
 
-  // Добавляем обработчик клика на элемент <span class="trash"></span>
+<span class="trash"></span>
 document.querySelectorAll('.trash').forEach(function(span) {
     span.addEventListener('click', function() {
-        // Получаем идентификатор задачи из атрибута data-event-id
         var noteId = this.parentNode.getAttribute('data-note-id');
-
-        // Вызываем функцию deleteNote для удаления задачи
         deleteNote(noteId);
     });
 });
 
 function deleteNote(noteId) {
-    // Создаем новый экземпляр объекта XMLHttpRequest
     var xhr = new XMLHttpRequest();
-
-    // Формируем URL для отправки запроса на удаление задачи
     var url = 'delete_note.php';
-
-    // Формируем данные для отправки в формате FormData
     var formData = new FormData();
     formData.append('id_note', noteId);
 
-    // Настройка запроса
     xhr.open('POST', url, true);
-
-    // Устанавливаем заголовки запроса
+    
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
-    // Отправляем запрос
     xhr.send(formData);
 
-    // Обработка ответа от сервера
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 var response = xhr.responseText;
                 if (response.trim() === 'true') {
-                    // Если удаление выполнено успешно, обновляем страницу
                     location.reload();
                 } else {
-                    // В случае ошибки выводим сообщение об ошибке
                     console.error('Ошибка при удалении задачи:', response);
                 }
             } else {
@@ -157,7 +138,7 @@ function updateNote(noteId) {
         fetch('update_note.php', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded' // Может потребоваться изменить на 'application/json' в зависимости от сервера
+                'Content-Type': 'application/x-www-form-urlencoded' 
             },
             body: "note_id=" + encodeURIComponent(noteId) + "&notes=" + encodeURIComponent(noteText)
         })
@@ -165,13 +146,11 @@ function updateNote(noteId) {
             if (response.ok) {
                 location.reload();
             } else {
-                // В случае ошибки выводим сообщение об ошибке
                 throw new Error('Ошибка при обновлении заметки');
             }
         })
         .catch(error => console.error(error));
     } else {
-        // Если текст заметки пустой, выводим сообщение об ошибке
         alert("Текст заметки не может быть пустым.");
     }
 }
