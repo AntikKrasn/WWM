@@ -103,22 +103,17 @@
   </div>
   <script src="calendar.js">function addEvent() {
 const listContainer = document.getElementById('listContainer');
-
-// Получаем значение поля задачи
 var event = document.getElementById("input-box").value;
-// Получаем значение поля даты
 
 var date = document.getElementById("date-input-box").value;
 
-
 if (event === '' || date === '') {
-
   alert('Вы не ввели текст или дату!');
 } else {
 
   const listItem = document.createElement('li');
 
-  listItem.innerHTML = event + '<br><span class="dates">' + date +'<span class="delete-event"></span>'; // Добавляем и отображаем дату
+  listItem.innerHTML = event + '<br><span class="dates">' + date +'<span class="delete-event"></span>'; 
   listContainer.appendChild(listItem);
 
   let span = document.createElement("span");
@@ -127,46 +122,33 @@ if (event === '' || date === '') {
   listItem.appendChild(span);
 
   document.getElementById('input-box').value = '';
-  document.getElementById('date-input-box').value = ''; // Очищаем значение поля ввода даты
+  document.getElementById('date-input-box').value = ''; 
 
-  // Создаем новый экземпляр объекта XMLHttpRequest
   var xhr = new XMLHttpRequest();
-
-  // Формируем URL для отправки запроса на добавление задачи
   var url = 'save_event.php';
 
-  // Формируем данные для отправки в формате FormData=
   var formData = new FormData();
   formData.append('event', event);
-  formData.append('date', date); // Добавляем дату в данные для отправки
+  formData.append('date', date); 
 
-  // Настройка запроса=
   xhr.open('POST', url, true);
-
-  // Устанавливаем заголовки запроса
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-
-  // Отправляем запрос
   xhr.send(formData);
 
-  // Обработка ответа от сервера
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         var response = xhr.responseText;
         if (response.trim() === 'true') {
-           // Если добавление выполнено успешно, обновляем страницу
            location.reload();
           } else {
-            // В случае ошибки выводим сообщение об ошибке
             console.error('Ошибка при добавлении задачи:', xhr.responseText);
           }
         }
       }
     }
   }
-}</script>
-  
+}
+  </script>
 </body>
-
 </html>
