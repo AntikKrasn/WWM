@@ -51,8 +51,7 @@
             <div class="main-line">
                 <div class="main-title">Для чего? </div>
             </div>
-        </div>
-            
+        </div>  
             <div class="container2">
                 <div class="containerleft">
                     <div class="num">
@@ -78,11 +77,8 @@
                             </div>
                         </div>
                     </div> 
-    
                 </div>
-    
                 <div class="containerright">
-                    
                     <div class="num">
                         <div class="numbers">
                             <div class="image">
@@ -93,7 +89,6 @@
                                 <div class="opisanie3">Помогает организовывать события и следить за ними. Пользователи могут создавать новые события и отслеживать их по календарю</div>
                             </div>
                         </div>
-    
                         <div class="numbers2">
                             <div class="image">
                                 <img class="img-people" src="img/4.png">
@@ -108,7 +103,6 @@
                 </div>
             </div> 
     </div>
-
     <div class="fotter">
         <div class="fotter-container">
             <div class="fotter-line">
