@@ -25,10 +25,7 @@ session_start();
 <script>
    document.querySelectorAll('.delete-event').forEach(function(span) {
     span.addEventListener('click', function() {
-        // Получаем идентификатор задачи из атрибута data-event-id
         var eventId = this.parentNode.getAttribute('data-event-id');
-
-        // Вызываем функцию deleteTask для удаления задачи
         deleteEvent(eventId);
     });
 });
@@ -47,25 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }, false);
 });
 
-    // Функция для удаления задачи
     function deleteEvent(eventId) {
-    // Создаем новый экземпляр объекта XMLHttpRequest
     var xhr = new XMLHttpRequest();
-
-    // Формируем URL для отправки запроса на удаление задачи
     var url = 'delete_event.php';
-
-    // Формируем данные для отправки в формате FormData
     var formData = new FormData();
     formData.append('id_calendar', eventId);
 
-    // Настройка запроса
     xhr.open('POST', url, true);
-
-    // Устанавливаем заголовки запроса
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-
-    // Отправляем запрос
     xhr.send(formData);
 
     xhr.onreadystatechange = function() {
