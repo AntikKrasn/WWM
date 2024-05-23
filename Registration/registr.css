@@ -1,0 +1,277 @@
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: 'Montserrat Alternates', serif;
+}
+
+.main{
+    height: 100vh;
+    margin: 0px 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.container {
+    max-width: 100%;
+}
+
+
+.container2 {
+    padding-top: 43px;
+    position: relative;
+}
+
+.header-line {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.vvm {
+    color: #6F5490;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.container ul {
+    list-style-type: none;
+}
+
+.container ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.container ul li a {
+    position: relative;
+    color: #000000; 
+    cursor: pointer;
+    line-height: 1; 
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+.container ul li a:hover:after,
+a:focus:after {
+	width: 100%; 
+}
+
+.fotter {
+    max-width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+  }
+
+
+.fotter ul {
+    list-style-type: none;
+}
+
+.fotter ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.main-fotter{
+    padding-top: 50px;
+  }
+  
+
+
+/*КАТЯ*/
+.form input{
+    margin: 0;
+    border: none;
+    border-bottom: 3px solid #6F5490;
+    outline: none;
+    width: 369px;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: 'Montserrat Alternates', serif;
+    float: left;
+} 
+
+.containerregistr{
+    font-size: 48px;
+    font-weight: 900;
+    color: #6F5490;
+    padding-bottom: 25px;
+}
+
+.textform{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text2{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.formflex{
+    display: flex;
+
+}
+
+.btn{
+    background-color: #6F5490;
+    width: 369px;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: 'Montserrat Alternates', serif;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #B3ABBD;
+  }
+.account{
+    padding-top: 20px;
+}
+.textaccount{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.textaccount2 a{
+    text-decoration: none;
+    color: #FF6996;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+.textaccount2 a:hover{
+    color: #6F5490;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form{
+    padding-bottom: 50px;
+    margin: 0 118px 34px 0;
+}
+
+.registrflex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-regist{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина всего элемента навигации */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:none;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #6f549083;   /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+  
+
+@media only screen and (min-width: 1440px) and (max-width: 1650px){
+    .main{
+        margin: 0px 130px;
+    }
+
+    .header-line{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .fotter {
+        max-width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 1px solid rgba(0, 0, 0, 1);
+    }
+
+    .form{
+        margin: 0 80px 34px 0;
+        padding-bottom: 35px;
+    }
+
+    .img-regist{
+        top: 35%;
+    }
+}
+
+
+@media only screen and (min-width: 1650px) and (max-width: 1680px){
+    .main{
+        margin: 0px 200px;
+    }
+    .img-regist{
+        top: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .header-line {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+    .main{
+        margin: 0px 80px;
+    }
+    
+    .container2 {
+    padding-top: 30px;
+}
+
+   .img-regist {
+    top: 30%;
+    width:300px;
+}
+    
+.fotter {
+   padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.containerregistr {
+    padding-bottom: 20px;
+}
+.form {
+    padding-bottom: 35px;
+    margin: 0 60px 34px 0;
+}
+.textform {
+    font-size: 20px;
+}
+.form input {
+    font-size: 18px;
+    width: 330px;
+}
+.containerregistr {
+    font-size: 40px;
+}
+.btn {
+    font-size: 18px;
+    width: 330px;
+}
+}

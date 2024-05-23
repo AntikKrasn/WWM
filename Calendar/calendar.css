@@ -1,0 +1,923 @@
+﻿:root {
+  --primary-clr: #000;
+}
+
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: 'Montserrat Alternates', serif;
+}
+
+.main{
+  height: 100vh;
+  margin: 0px 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-line {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.vvm {
+  color: #6F5490;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.container ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px;
+}
+
+.container ul li a {
+  position: relative;
+  color: #000000; 
+  cursor: pointer;
+  line-height: 1; 
+  text-decoration: none; 
+  font-size: 16px;
+}
+
+.container ul li a:hover:after,
+a:focus:after {
+width: 100%; 
+}
+
+.container2 {
+  padding-top: 43px;
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  height: 90%;
+  justify-content: space-between;
+}
+
+.retangle img {
+  width: 100%;
+  height: 47px;
+  padding-top: 7px;
+}
+
+.retangle-nav {
+    width: 45%;
+    position: absolute; 
+    top: 65px; 
+}
+
+.retangle-nav ul{
+    list-style-type: none;
+}
+
+.retangle-nav ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.retangle-nav ul li a {
+    position: relative;
+    color: #000000; 
+    cursor: pointer;
+    line-height: 1; 
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+.retangle-nav ul li a.checked {
+  font-weight: 700;
+}
+
+.retangle-nav ul li a:hover:after,
+a:focus:after {
+	width: 100%; 
+}
+
+.retangle-nav ul li a:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+	height: 2px; 
+}
+
+.containerright{
+ display: inline-block;
+ white-space: normal;	
+ box-sizing: content-box;
+ min-width: 46%;
+ max-width: 46%;
+ height: 680px;
+}
+
+.main-container{
+  width: 100%;
+}
+
+.containerleftheader{
+    font-size: 48px;
+    font-weight: 900;
+    color: #6F5490;
+}
+
+.containerleftheader-title{
+    padding-top:25px;
+}
+
+.containerleftheaderheader-title2{
+    padding-top:10px;
+}
+
+
+.text1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text2{
+    padding-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.main-fotter{
+  padding-top: 50px;
+}
+
+.fotter {
+  max-width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+}
+
+
+.todo{
+    padding-top: 10px;
+    width: 400px;
+}
+
+.myDIV{
+    padding-bottom: 10px;
+}
+
+.fotter ul {
+    list-style-type: none;
+}
+
+.fotter ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.left {
+  width: 540px;
+  padding: 20px;
+}
+.calendar {
+  position: relative;
+  width: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #878895;
+  border-radius: 15px;
+  background-color: #DFE3EE;
+}
+
+.calendar .month {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 50px 0px 50px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+}
+.calendar .month .prev,
+.calendar .month .next {
+  cursor: pointer;
+  
+
+}
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+  color: var(--primary-clr);
+}
+.calendar .weekdays {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+  text-transform: capitalize;
+}
+.weekdays div {
+  width: 14.28%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar .days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.calendar .days .day {
+  width: 14.28%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-clr);
+  font-size: 24px;
+}
+
+.calendar .days .prev-date,
+.calendar .days .next-date {
+  color: #b3b3b3;
+}
+.calendar .days .active {
+  position: relative;
+  font-size: 24px;
+  color: #fff;
+  background-color: #B3ABBD;
+}
+.calendar .days .active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.calendar .days .today {
+  font-size: 24px;
+  font-weight: 600;
+}
+.calendar .days .event {
+  position: relative;
+}
+.calendar .days .event::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 75%;
+  height: 1px;
+  border-radius: 30px;
+  transform: translateX(-50%);
+  background-color: var(--primary-clr);
+}
+.calendar .days .active.event::after {
+  background-color: #fff;
+  bottom: 20%;
+}
+.calendar .days .active.event {
+  padding-bottom: 10px;
+}
+.calendar .goto-today {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.calendar .goto-today .goto {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+ border: 1px solid #B3ABBD;
+}
+.calendar .goto-today .goto input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-family: 'Montserrat Alternates', serif;
+}
+.calendar .goto-today button {
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: #B3ABBD;
+  font-family: 'Montserrat Alternates', serif;
+  border: 1px solid #B3ABBD;
+}
+.calendar .goto-today button:hover {
+  color: #fff;
+  background-color: #B3ABBD;
+}
+.calendar .goto-today .goto button {
+  border: none;
+  border-radius: 0;
+}
+.container .containerright {
+  position: relative;
+  width: 40%;
+  min-height: 100%;
+  padding: 20px 0;
+}
+
+.containerright .today-date {
+  display: none;
+}
+.containerright .today-date .event-day {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.containerright .today-date .event-date {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #878895;
+}
+.events {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; 
+}
+
+.events .event {
+  position: relative;
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #000000;
+  cursor: pointer;
+}
+
+.events::-webkit-scrollbar {
+  width: 7px; /* Ширина всего элемента навигации */
+}
+
+.events::-webkit-scrollbar-track {
+  background:none;
+}
+.events::-webkit-scrollbar-thumb {
+  background-color: #6f549083;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+
+/* even event */
+.events .event:nth-child(even) {
+  background: transparent;
+}
+.events .event .title {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+h3{
+	margin-top: 0px;
+}
+.events .event .title .event-title {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.events .event i {
+  color: var(--primary-clr);
+  font-size: 0.5rem;
+}
+.events .event:hover i {
+  color: #fff;
+}
+.events .event .event-time {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #878895;
+  pointer-events: none;
+}
+.events .event:hover .event-time {
+  color: #fff;
+}
+/* add tick in event after */
+.events .event::after {
+  content: url(img/delete.png);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 3rem;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-clr);
+  transform: translateY(-50%);
+}
+.events .event:hover::after {
+  display: flex;
+}
+.add-event {
+  position: absolute;
+  top: 135px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #878895;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+.add-event:hover {
+  opacity: 1;
+}
+.add-event i {
+  pointer-events: none;
+}
+.events .no-event {
+	padding-top:20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 300;
+  color: #B3ABBD
+}
+
+.add-event-wrapper {
+  
+  bottom: 100px;
+  max-height: 0;
+  overflow: hidden;
+}
+  .add-event-wrapper.active {
+  max-height: 350px;
+  width: 400px;
+  background-color: white;
+  border: 2px solid #6F5490;
+  box-shadow: 0 0 10rgb(255, 255, 255)(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: 'Montserrat Alternates', serif;
+  background-color: #fff;
+  transform: translate(-60%, 45%);
+  position: absolute;
+  }
+
+.add-event-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  padding-bottom: 40px;
+}
+.add-event-header .close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.add-event-header .close:hover {
+  color: var(--primary-clr);
+}
+.add-event-header .title {
+  font-size: 32px;
+  font-weight: 700;
+}
+.add-event-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.add-event-body .add-event-input {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.add-event-body .add-event-input input {
+  width: 300px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  font-family: 'Montserrat Alternates', serif;
+  padding: 0 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #373c4f;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid #6F5490;
+}
+.add-event-body .add-event-input input::placeholder {
+  color: #a5a5a5;
+}
+.add-event-body .add-event-input input:focus {
+  outline: none;
+}
+
+.add-event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.add-event-footer .add-event-btn {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  color: #000;
+  background-color: #9CAFE2;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-family: 'Montserrat Alternates', serif;
+}
+
+
+.credits {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #b38add;
+}
+.credits a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.credits a:hover {
+  text-decoration: underline;
+}
+
+body::-webkit-scrollbar {
+  width: 15px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6f549083;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.row button{
+  padding: 0px;
+  position: absolute;
+  right: 0;
+  border: none;
+  width: 65px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  background: none;
+  height: 55px;
+}
+
+
+input[type="text" ] {
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid #6F5490;
+  outline: none;
+  width: 330px;
+  padding: 15px;
+  padding-left: 0;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', serif;
+  float: left;
+}
+
+input[type="date"] {
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid #6F5490;
+  outline: none;
+  width: 150px;
+  padding: 14px;
+  padding-left: 0;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', serif;
+  float: left;
+  color: #6E6666;
+}
+
+.inputdate::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.containerleft2 {
+  margin-top: 20px;
+  width: 100%;
+  height: 460px;
+  overflow-y: scroll; /* Показываем вертикальный скролл */
+  overflow-x: hidden; /* Скрываем горизонтальный скролл */
+  position: relative;
+  scrollbar-width:  8px;
+  }
+
+  .containerleft2::-webkit-scrollbar {
+    width: 8px; /* Ширина всего элемента навигации */
+    cursor: pointer;
+  }
+  
+  .containerleft2::-webkit-scrollbar-track {
+    background:none;
+    cursor: pointer;
+  }
+  
+  .containerleft2::-webkit-scrollbar-thumb {
+    background-color: #6f549083;   
+    border-radius: 10px;    
+    cursor: pointer;   
+  }
+
+.containerleft2 ul {
+  padding: 0;
+  margin: -20px 0 0 0px
+}
+
+.containerleft2 ul li {
+  list-style: none;
+  font-size: 18px;
+  user-select: none;
+  padding: 0px 0 13px 30px;
+  cursor: pointer;
+  position: relative;
+  width: 93%;
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', serif;
+  font-weight: 600;
+  cursor: auto;
+}
+
+.containerleft2 ul li::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-image: url(img/calendar_month.png);
+  background-size: cover;
+  background-position: center;
+  top: 20px;
+  left: 0;
+  cursor: auto;
+}
+
+.containerleft2 ul li span.delete-event {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  background-image: url(img/close_small.png);
+  cursor: pointer;
+}
+
+.containerleft2 ul li span.dates{
+  font-size: 22px;
+  color: #6E6666;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1650px){
+  .main{
+      margin: 0px 130px;
+  }
+
+  .header-line{
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  .calendar .month {
+    padding: 20px 50px 0px 50px;
+    font-size: 20px;
+}
+
+.calendar .weekdays {
+  padding: 15px 15px;
+  font-size: 20px;
+}
+
+.calendar .days {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.calendar .days .day {
+    height: 35px;
+}
+
+ .fotter {
+    max-width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+  }
+  
+  .add-event {
+  top: 135px;
+  }
+  .events{
+	  max-height: 340px;
+  }
+  .containerleft2{
+    height: 260px;
+  }
+  .containerright{
+    height: 260px;
+  }
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 1680px){
+  .main{
+      margin: 0px 200px;
+  }
+
+  .containerleft2{
+    height: 310px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .header-line {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+    .main{
+        margin: 0px 80px;
+    }
+    
+    .container2 {
+    padding-top: 30px;
+}
+    
+.fotter {
+   padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.containerleftheader {
+    font-size: 40px;
+}
+
+.retangle img {
+    height: 35px;
+}
+.retangle-nav ul li a {
+    font-size: 14px;
+}
+.retangle-nav {
+    top: 45px;
+}
+
+.text1 {
+    font-size: 20px;
+}
+.containerleftheader-title {
+    padding-top: 20px;
+}
+
+input[type="text" ] {
+    font-size: 16px;
+}
+
+input[type="date"] {
+       font-size: 16px;
+}
+
+.row button {
+    height: 52px;
+}
+
+.containerleft2 ul li span.dates {
+    font-size: 20px;
+}
+
+.containerleft2 ul li {
+    font-size: 18px;
+    width: 92%;
+    padding: 0px 0 2px 30px;
+}
+#listContainer2 li {
+    
+    padding: 15px 15px 10px 15px;
+    height: 130px;
+}
+
+.containerleft2{
+  height: 257px;
+}
+
+#list-container{
+  height: 257px;
+}
+.main-fotter {
+    padding-top: 30px;
+}
+
+.calendar .month {
+    padding: 20px 50px 0px 50px;
+    font-size: 20px;
+}
+
+.calendar .weekdays {
+  padding: 15px 15px;
+  font-size: 20px;
+}
+
+.calendar .days {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.calendar .days .day {
+    height: 35px;
+}
+
+.calendar {
+   width: 500px;
+}
+.add-event {
+  top: 135px;
+  }
+  .events{
+	  max-height: 340px;
+  }
+  .containerright{
+    height: 257px;
+  }
+}

@@ -1,0 +1,660 @@
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: 'Montserrat Alternates', serif;
+}
+
+.main{
+  height: 100vh;
+  margin: 0px 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.header-line {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.vvm {
+  color: #6F5490;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.container ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px;
+}
+
+.container ul li a {
+  position: relative;
+  color: #000000; 
+  cursor: pointer;
+  line-height: 1; 
+  text-decoration: none; 
+  font-size: 16px;
+}
+
+.container ul li a:hover:after,
+a:focus:after {
+width: 100%; 
+}
+
+.container2 {
+  padding-top: 43px;
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  height: 70%;
+}
+
+.retangle img {
+  width: 100%;
+  height: 47px;
+  padding-top: 7px;
+}
+
+.retangle-nav {
+    width: 45%;
+    position: absolute; 
+    top: 65px; 
+}
+.retangle-nav ul{
+    list-style-type: none;
+}
+
+.retangle-nav ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.retangle-nav ul li a {
+    position: relative;
+    color: #000000; 
+    cursor: pointer;
+    line-height: 1; 
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+.retangle-nav ul li a.checked {
+  font-weight: 700;
+}
+
+.retangle-nav ul li a:hover:after,
+a:focus:after {
+	width: 100%; 
+}
+
+.retangle-nav ul li a:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+	height: 2px; 
+}
+
+.containerleft{
+  width: 54%;
+}
+
+.containerright{
+ display: inline-block;
+ white-space: normal;	
+ box-sizing: content-box;
+ min-width: 46%;
+ max-width: 46%;
+}
+
+.main-container{
+  width: 100%;
+}
+
+.containerleftheader{
+    font-size: 48px;
+    font-weight: 900;
+    color: #6F5490;
+}
+
+.containerleftheader-title{
+    padding-top:25px;
+}
+
+.containerleftheaderheader-title2{
+    padding-top:10px;
+}
+
+
+.text1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text2{
+    padding-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.main-fotter{
+  padding-top: 50px;
+}
+
+.fotter {
+  max-width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+}
+
+.myDIV{
+    padding-bottom: 10px;
+}
+
+.fotter ul {
+    list-style-type: none;
+}
+
+.fotter ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+/*TODOLIST*/
+.todoapp{
+  width: 100%;
+  max-width: 390px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.row button{
+  padding: 0px;
+  position: absolute;
+  right: 0;
+  border: none;
+  width: 65px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  background: none;
+  height: 55px;
+  border-bottom: 3px solid #6F5490;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid #6F5490;
+  outline: none;
+  width: 380px;
+  padding: 15px;
+  padding-left: 0;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', serif;
+  float: left;
+}
+
+.containerleft ul {
+  padding: 0;
+  margin: 0;
+}
+
+.containerleft ul li {
+  list-style: none;
+  font-size: 18px;
+  user-select: none;
+  padding: 2px 0 13px 30px;
+  cursor: pointer;
+  position: relative;
+  width: 337px;
+}
+
+.containerleft ul li::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-image: url(img/checkbox.png);
+  background-size: cover;
+  background-position: center;
+  top: 3px;
+  left: 0;
+}
+
+.containerleft ul li.checked {
+  text-decoration: line-through;
+}
+
+.containerleft ul li.checked::before {
+  background-image: url(img/check.png);
+}
+
+.containerleft ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  background-image: url(img/close_small.png);
+}
+
+/*Заметки*/
+#addNoteDiv {
+  background-color: #EBECEF;
+  border-radius: 15px;
+  height: 47px;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#addNoteDiv i {
+  font-size: 70px;
+  color: #000000;
+}
+
+
+/* List CSS */
+#listContainer2 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -20px 0 0 0px;
+  width: 97%;
+}
+
+#listContainer2 li:first-child,
+#listContainer2 li:nth-child(2) {
+    margin-top: 0;
+}
+
+#listContainer2 li {
+  background-color: #DFE3EE;
+  margin-top: 15px;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between; /* Added to align buttons to the right */
+  height: 150px;
+  width: 42%;
+  border-radius: 20px;
+}
+
+#listContainer2 li span {
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#listContainer2 li span.trash {
+  border: none;
+  padding: 10px 15px 0px 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  background-color: #DFE3EE;
+  background: url(img/delete.png) no-repeat; 
+}
+
+#editBtn {
+  border: none;
+  padding: 19px 15px 0px 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  background-color: #DFE3EE;
+  background: url(img/ink_marker.png) no-repeat; 
+}
+
+/* Create Note Popup CSS */
+#popupContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border: 2px solid #6F5490;
+  box-shadow: 0 0 10rgb(255, 255, 255)(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat Alternates', serif;
+}
+
+textarea::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+  cursor: pointer;
+}
+textarea::-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+  cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #6f549083;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  cursor: pointer;
+}
+
+
+textarea {
+  width: 300px;
+  height: 200px;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid #6F5490;
+  font-family: 'Montserrat Alternates', serif;
+  resize: none;
+}
+textarea:focus {
+outline: none;
+}
+
+#btn-container {
+  display: flex;
+  font-family: 'Montserrat Alternates', serif;
+}
+
+#submitBtn, #closeBtn {
+  width: 100px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: 'Montserrat Alternates', serif;
+}
+
+#closeBtn {
+  background-color: gainsboro;
+}
+
+/* Editing Popup CSS */
+#editing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#submitBtn, #closeBtn {
+  width: 100px;
+  color: #000000;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#closeBtn {
+  background-color: #B3ABBD;
+}
+
+#submitBtn{
+  background-color: #9CAFE2;
+}
+
+#listContainer2 li span::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+  cursor: pointer;
+}
+#listContainer2 li span::-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+  cursor: pointer;
+}
+
+#listContainer2 li span::-webkit-scrollbar-thumb {
+  background-color: #6f549083;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  cursor: pointer;
+}
+
+
+body::-webkit-scrollbar {
+  width: 15px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6f549083;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.containerleft2 {
+  width: 100%;
+  height: 460px;
+  overflow-y: scroll; /* Показываем вертикальный скролл */
+  overflow-x: hidden; /* Скрываем горизонтальный скролл */
+  position: relative;
+  scrollbar-width:  8px;
+  }
+
+  .containerleft2::-webkit-scrollbar {
+    width: 7px; /* Ширина всего элемента навигации */
+    cursor: pointer;
+  }
+  
+  .containerleft2::-webkit-scrollbar-track {
+    background:none;
+    cursor: pointer;
+  }
+  
+  .containerleft2::-webkit-scrollbar-thumb {
+    background-color: #6f549083;   
+    border-radius: 20px;    
+    cursor: pointer;   
+  }
+
+.containerright2{
+  height: 500px;
+  }
+
+#list-container{
+  margin-top: 15px;
+  width: 100%;
+  height: 460px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#list-container::-webkit-scrollbar {
+  width: 7px; /* Ширина всего элемента навигации */
+  padding-right: 20px;
+}
+
+#list-container::-webkit-scrollbar-track {
+  background:none;
+}
+#list-container::-webkit-scrollbar-thumb {
+  background-color: #6f549083;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1650px){
+  .main{
+      margin: 0px 130px;
+  }
+
+  .header-line{
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  .fotter {
+      max-width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-top: 1px solid rgba(0, 0, 0, 1);
+    }
+
+  #listContainer2 li{
+    height: 120px;
+    width: 41%;
+  }
+  .containerleft2{
+    height: 270px;
+  }
+  #list-container{
+    height: 265px;
+  
+  }
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 1680px){
+  .main{
+    margin: 0px 200px;
+  }
+
+  #listContainer2  li {
+    height: 120px;
+    width: 41%;
+}
+
+.containerleft2{
+  height: 320px;
+}
+
+#list-container{
+  height: 320px;
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .header-line {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+    .main{
+        margin: 0px 80px;
+    }
+    
+    .container2 {
+    padding-top: 30px;
+}
+    
+.fotter {
+   padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.containerleftheader {
+    font-size: 40px;
+}
+
+.retangle img {
+    height: 35px;
+}
+.retangle-nav ul li a {
+    font-size: 14px;
+}
+.retangle-nav {
+    top: 45px;
+}
+
+.text1 {
+    font-size: 20px;
+}
+.containerleftheader-title {
+    padding-top: 20px;
+}
+
+input {
+    font-size: 16px;
+}
+.row button {
+    height: 52px;
+}
+.containerleft ul li {
+    font-size: 16px;
+    padding: 3px 0 13px 30px;
+    width: 340px;
+}
+
+#listContainer2 li {
+    padding: 15px 15px 10px 15px;
+    height: 130px;
+}
+
+.containerleft2{
+  height: 257px;
+}
+
+#list-container{
+  height: 257px;
+}
+.main-fotter {
+    padding-top: 30px;
+}
+}

@@ -1,0 +1,451 @@
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: 'Montserrat Alternates', serif;
+}
+
+.header {
+    height: 100vh;
+}
+
+.container {
+    margin: 0px 312px;
+    max-width: 100%;
+}
+
+.header-line {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.vvm {
+    color: #6F5490;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+ul li a {
+    position: relative;
+    color: #000000; 
+    cursor: pointer;
+    line-height: 1; 
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+ul li a:hover:after,
+a:focus:after {
+	width: 100%; 
+}
+
+
+.img-header-inner{
+    padding-right: 5px;
+    align-items: center;
+}
+
+.container2 {
+    margin: 0px 312px;
+    max-width: 100%;
+}
+
+.header-title{
+    padding-top: 70px;
+    font-size: 170px;
+    font-family: 'Luckiest Guy', serif;
+    
+}
+
+.name1{
+    color: #6F5490;
+    height: 130px;
+}
+
+.name2{
+    color: #6F5490;
+    height: 130px;
+}
+
+.name3{
+    color: #92ACEF;
+    height: 130px;
+}
+
+.header-title2{
+    padding-top: 120px; 
+    font-size: 22px;
+    padding-bottom: 110px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.header-img{
+    position: relative;
+    text-align: end; 
+    height: 0px; 
+    top: 305px;
+}
+
+.header-quote{
+    top: 110px;
+    position: relative;
+    text-align: end; 
+    height: 0px; 
+    font-size: 28px;
+    font-weight: 600;
+    color: #92ACEF;
+}
+
+.main{
+    background-color: #92ACEF;
+    padding: 85px 0 85px;
+}
+
+.main-container {
+    margin: 0px 312px;
+    max-width: 100%;
+}
+
+.containerleft{
+    display: inline-block;
+    white-space: normal;	
+    box-sizing: content-box;
+    width: 46%;
+    padding-right: 100px;
+  }
+  
+  .containerright{
+   display: inline-block;
+   white-space: normal;	
+   box-sizing: content-box;
+   min-width: 46%;
+   max-width: 46%;
+  }
+
+  .container2 {
+    position: relative;
+    white-space: nowrap;
+    height: 70%;
+  }
+  
+.main-title{
+    padding-bottom: 100px;
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+
+
+.numbers{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 113px;
+
+}
+
+.numbers2{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.opisanie1{
+    font-size: 170px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.opisanie2{
+    font-size: 26px;
+    font-weight: 900;
+    color: #ffffff;
+    padding-bottom: 10px;
+}
+
+.opisanie3{
+    font-size: 18px;
+    color: #ffffff;
+
+}
+
+.opisanie {
+    width: 350px;
+    height: 100px;
+}
+
+.fotter-container {
+    margin: 0px 312px;
+    max-width: 100%;
+}
+
+.fotter-line {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+ul li {
+    position: relative;
+    color: #000000; 
+    line-height: 1; 
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина всего элемента навигации */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:none;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #6f549083;   /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+@media only screen and (min-width: 1440px) and (max-width: 1650px){
+    .container{
+        margin: 0px 130px;
+    }
+
+    .container2{
+        margin: 0px 130px;
+    }
+
+    .main{
+        padding: 70px 0 60px;
+    }    
+
+    .main-title{
+        padding-bottom: 50px;
+    }
+
+    .main-container{
+        margin: 0px 130px;
+    }
+
+    .fotter-container {
+        margin: 0px 130px;
+        max-width: 100%;
+    }
+
+    .header-line{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .header-title{
+        padding-top: 40px;
+        font-size: 140px;
+        font-family: 'Luckiest Guy', serif; 
+        flex-grow: 1
+    }
+
+    .header-quote{
+        top: 80px;
+        position: relative;
+        text-align: end; 
+        height: 0px; 
+        font-size: 26px;
+        font-weight: 600;
+        color: #92ACEF;
+    }
+
+    .header-title2{
+        padding-top: 50px; 
+        font-size: 22px;
+        padding-bottom: 50px;
+        
+    }
+
+    .header-img{
+        position: relative;
+        text-align: end; 
+        height: 0px; 
+        top: 205px;
+    }
+
+    .line{
+        margin-top: 30px;
+        height: 1px; 
+        background-color: black;
+    }
+
+    .numbers{
+        padding-bottom: 50px;
+    }
+
+    .numbers2{
+        padding-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 1680px){
+    .container{
+        margin: 0px 200px;
+    }
+
+    .container2{
+        margin: 0px 200px;
+    }
+    
+    .main-container{
+        margin: 0px 200px;
+    }
+
+    .fotter-container {
+        margin: 0px 130px;
+        max-width: 100%;
+    }
+
+    .header-title{
+        padding-top: 45px;
+    }
+
+    .header-img{
+        top: 275px;
+    }
+
+    .header-quote{
+        top: 80px;
+        position: relative;
+        text-align: end; 
+        height: 0px; 
+        font-size: 26px;
+        font-weight: 600;
+        color: #92ACEF;
+    }
+    
+    .header-title2 {
+        padding-bottom: 85px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .header-line {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .main-title {
+    padding-bottom: 60px;
+}
+    
+    .numbers {
+    padding-bottom: 60px;
+}
+
+    .main {
+    padding: 60px 0 80px;
+}
+
+.img-people{
+    max-width: 115px;
+    height: 115px;
+}
+.opisanie3 {
+    font-size: 16px;
+}
+.opisanie2 {
+    font-size: 24px;
+}
+
+.containerleft {
+    padding-right: 50px;
+}
+    
+    .container{
+        margin: 0px 80px;
+    }
+
+    .container2{
+        margin: 0px 80px;
+    }
+    
+    .main-container{
+        margin: 0px 80px;
+    }
+
+    .fotter-container {
+        margin: 0px 80px;
+        max-width: 100%;
+    }
+
+    .header-title{
+        padding-top: 25px;
+        font-size: 140px;
+    }
+    
+    .name1 {
+    height: 110px;
+    }
+    .name2 {
+    height: 110px;
+    }
+    .name3 {
+    height: 110px;
+    }
+
+    .img-header-title{
+        top: 0px;
+        width: 420px;
+    }
+    
+    .header-img {
+       top: 210px;
+    }
+
+    .header-quote{
+        top: 55px;
+        font-size: 20px;
+    }
+    
+    .header-title2 {
+        padding-top: 60px;
+        padding-bottom: 50px;
+        font-size: 20px;
+    }
+    .fotter-line {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+    
+    .fotter {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+}
