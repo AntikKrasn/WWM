@@ -110,15 +110,12 @@ var date = document.getElementById("date-input-box").value;
 if (event === '' || date === '') {
   alert('Вы не ввели текст или дату!');
 } else {
-
   const listItem = document.createElement('li');
 
   listItem.innerHTML = event + '<br><span class="dates">' + date +'<span class="delete-event"></span>'; 
   listContainer.appendChild(listItem);
-
   let span = document.createElement("span");
   span.innerText = "";
-
   listItem.appendChild(span);
 
   document.getElementById('input-box').value = '';
