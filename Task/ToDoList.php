@@ -47,7 +47,6 @@
     function addTask() {
         const listContainer = document.getElementById('listContainer');
 
-        // Получаем значение поля задачи
         var task = document.getElementById("input-box").value;
 
         if (task === '') {
@@ -63,12 +62,10 @@
             listItem.appendChild(span);
 
             document.getElementById('input-box').value = '';
-
-           // Отправляем данные на серверный скрипт add_event.php
+            
            var xhr = new XMLHttpRequest();
            var params = 'task=' + encodeURIComponent(task);
 
-            // Формируем URL для отправки запроса на добавление задачи
             xhr.open('POST', 'save_task.php', true);
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
             
@@ -87,7 +84,6 @@
             <?php include 'display_tasks.php'; ?>
             </div>
                 </div>
-
                 <div class="containerright">
                     <div class="main-container">
                         <div class="retangle"><img src="img/Rectangle 4.png" alt=""></div>
@@ -116,7 +112,6 @@
             </div>
         </div>
     </div>
-   
     <div class="main-fotter">
         <div class="fotter">
             <div class="fotter-container">
@@ -131,9 +126,9 @@
             </div>
         </div>
     </div>
-    </div>
 </div>
-    <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 
 </html>
