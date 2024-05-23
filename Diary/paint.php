@@ -50,67 +50,49 @@
 <?php
 error_reporting(0);
 session_start();
-include_once 'db.php'; // Подключаем скрипт подключения к БД
-$login = $_SESSION['login']; // Получаем логин из сессии
+include_once 'db.php'; 
+$login = $_SESSION['login'];
 
-// Подготавливаем запрос для извлечения записей из дневника пользователя
 $sql = "SELECT * FROM diary WHERE login = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $login);
 
-// Выполняем запрос
 $stmt->execute();
 
-// Получаем результат запроса
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    // Если есть данные, выводим их в поле textarea
     while ($row = $result->fetch_assoc()) {
-        // Экранируем специальные символы
         $diaryText = htmlspecialchars($row['diary_text']);
         
-        // Заменяем переносы строк на специальные символы
         $diaryText = str_replace("\n", '\\n', $diaryText);
         $diaryText = str_replace("\r", '\\r', $diaryText);
         
-        // Вставляем данные в скрипт с переносами строк
         echo '<script>document.querySelector("textarea[name=\'note\']").value += \'' . $diaryText . '\';</script>';
     }
 }
 ?>
 </div>
-
 <script>
 window.addEventListener("load", function() {
-    // Получаем поле textarea
     var noteTextarea = document.querySelector("textarea[name='note']");
     
-    // Проверяем, если поле пустое или содержит только пробелы, то устанавливаем placeholder
     if (noteTextarea.value.trim() === '') {
         noteTextarea.setAttribute('placeholder', 'Напиши свои мысли...');
     }
 });
 
 document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Предотвращаем стандартное действие формы (автоматическую отправку)
-
-    // Получаем текст записи из поля textarea
+    event.preventDefault(); 
     var note = document.querySelector("textarea[name='note']").value;
-
-    // Создаем объект XMLHttpRequest
     var xhr = new XMLHttpRequest();
 
-    // Настраиваем запрос
     xhr.open("POST", "load_diary.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    // Устанавливаем обработчик события onload (когда ответ получен)
     xhr.onload = function() {
         if (xhr.status === 200) {
-            // Проверяем ответ от сервера
             if (xhr.responseText === "true") {
-                // Если обновление успешно, перезагружаем страницу
                 location.reload();
             } else {
                 console.error("Произошла ошибка при сохранении данных");
@@ -120,7 +102,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
         }
     };
 
-    // Отправляем запрос
     xhr.send("note=" + encodeURIComponent(note));
 });
 </script>
