@@ -33,7 +33,6 @@ listContainer.addEventListener("click", function(e) {
     }
 }, false);
 
-// Load tasks from localStorage
 function showTask() {
     listContainer.innerHTML = localStorage.getItem("tasks") || '';
 }
