@@ -3,7 +3,6 @@ error_reporting(0);
 require_once('db.php');
 session_start();
 ?>
-
     <ul id="listContainer">
         <?php
         if (isset($_SESSION['login'])) {
@@ -69,16 +68,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Отправляем запрос
     xhr.send(formData);
 
-    // Обработка ответа от сервера
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 var response = xhr.responseText;
                 if (response.trim() === 'true') {
-                    // Если удаление выполнено успешно, обновляем страницу
                     location.reload();
                 } else {
-                    // В случае ошибки выводим сообщение об ошибке
                     console.error('Ошибка при удалении задачи:', response);
                 }
             } else {
