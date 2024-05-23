@@ -43,7 +43,7 @@
                                 <button type="button" class="add" onclick="addTask()"><img src="img/add.png" alt=""></button>
                             </div>
                         </form>
-                        <script>
+<script>
     function addTask() {
         const listContainer = document.getElementById('listContainer');
 
